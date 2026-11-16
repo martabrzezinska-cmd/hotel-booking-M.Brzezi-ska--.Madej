@@ -14,30 +14,29 @@ An interpretable CatBoost analysis of 36,285 hotel bookings. We study how **lead
 
 All results are descriptive associations, not causal effects. Rows inside groups of identical bookings are not independent, so we do not report formal tests.
 
-## Repository structure
+## Files
 
-```
-.
-├── README.md
-├── requirements.txt
-├── .gitignore
-├── data/
-│   └── booking.csv          # not committed, see "Data" below
-├── notebooks/
-│   └── hotel_cancel_analysis.ipynb
-```
+| File | Description |
+|---|---|
+| `hotel_cancel_analysis.ipynb` | Full analysis: EDA, CatBoost model, interpretation of H1–H3 |
+| `booking.csv` | Dataset: 36,285 bookings, one row each |
+| `requirements.txt` | Python packages needed to run the notebook |
+| `.gitignore` | Files that Git should not track |
+
+Running the notebook also saves the charts used on the presentation slides to a `figures/` folder.
 
 ## Data
 
-Put `booking.csv` in `data/` (or next to the notebook and adjust the path in the first code cell).
+`booking.csv` is in the repository root, next to the notebook, and the notebook reads it from there.
 Source: (https://www.kaggle.com/datasets/youssefaboelwafa/hotel-booking-cancellation-prediction/data)
+
 ## How to run
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-jupyter notebook notebooks/hotel_cancel_analysis.ipynb
+jupyter notebook hotel_cancel_analysis.ipynb
 ```
 
 Set `DEDUP = True` in the first code cell to rerun everything without exact duplicate rows (sensitivity analysis). Run all cells after changing it.
