@@ -30,8 +30,7 @@ All results are descriptive associations, not causal effects. Rows inside groups
 ## Data
 
 Put `booking.csv` in `data/` (or next to the notebook and adjust the path in the first code cell).
-Source: *add the dataset name, link and licence here.* Check the licence before committing the CSV to a public repository.
-
+Source: (https://www.kaggle.com/datasets/youssefaboelwafa/hotel-booking-cancellation-prediction/data)
 ## How to run
 
 ```bash
